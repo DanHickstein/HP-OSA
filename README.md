@@ -13,6 +13,8 @@ These scripts were run with Python2, so there are probably some print statements
 
 Pleaes make a pull request if you make any improvements.
 
+One of the scripts just collects a single spectrum, while the "time series" script continuously collects spectra over time.
+
 This is MIT licensed, so please do whatever you want with it.
 
 Have fun!
