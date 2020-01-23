@@ -1,7 +1,7 @@
 # HP-OSA
-Some python code to get spectra from an old HP 70950A optical spectrum analyzer (OSA)
+Here is some python code to get spectra from an old HP 70950A optical spectrum analyzer (OSA) connected via GPIB.
 
-These script are used to grab spectra from an HP OSA connected via GPIB. You'll probably need to change the address of the OSA that is hard-coded into this script. Use 
+You'll probably need to change the address of the OSA that is hard-coded into this script. Use 
 
     import visa
     rm = visa.ResourceManager()
@@ -9,11 +9,19 @@ These script are used to grab spectra from an HP OSA connected via GPIB. You'll 
 
 to get the address of the OSA. 
 
-These scripts were run with Python2, so there are probably some print statements that need parentheses.
+You'll need some other software to run these scripts:
 
-Pleaes make a pull request if you make any improvements.
+ - National instruments VISA:
+       https://www.ni.com/en-us/support/downloads/drivers/download.ni-visa.html#329456
+ - pyvisa:
+       use the Anaconda Prompt and type "pip install pyvisa"
+       https://pypi.org/project/PyVISA/
+ - For the NI GPIB-to-USB converter, you need NI 488.2 driver
+       https://www.ni.com/en-us/support/downloads/drivers/download.ni-488-2.html#329025
 
-One of the scripts just collects a single spectrum, while the "time series" script continuously collects spectra over time.
+Please make a pull request if you make any improvements.
+
+The HP_OPA.py script collects a single spectrum, while the "time series" script continuously collects spectra over time.
 
 This is MIT licensed, so please do whatever you want with it.
 
